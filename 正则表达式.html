@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+//           var iphone="13192261058";
+//            var iphonereg=/^1[3-9][0-9]{9}/;     //手机的规则，第一位必须是1，第二位不能从12开始所以是3到9，后面的九位可以是任意的数字
+//            console.log(iphonereg.test(iphone));
+            var emailreg=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;//电子邮件的正则表达式，网上有现成
+            var email=prompt("请输入你的邮件地址：");
+            console.log(emailreg.test(email));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

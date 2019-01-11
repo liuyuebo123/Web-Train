@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>定位练习2</title>
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+        }
+         div {
+            box-sizing: border-box;
+            width: 800px;
+            height: 600px;
+            /*background-color:yellow;*/
+            margin: 0 auto;
+             position: relative;
+         }
+        .wine {
+            width: 800px;
+            background:url("image/啤酒.jpg") no-repeat;
+        }
+        .wine ol{
+            list-style: none;
+            width: 200px;
+            height: 30px;
+            background-color: deepskyblue;
+            box-sizing: border-box;
+            position : absolute;
+            right: 15px;
+            bottom: 14px;
+        }
+        .wine ol li {
+            float: left;
+            padding-left: 25px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid gold;
+        }
+        span{
+            color:yellow;
+            width: 30px;
+            height: 60px;
+            background-color: rgba(0,0,0,0.5);
+            line-height: 50px;
+            font-size: 40px;
+            text-align: center;
+
+
+        }
+        .kuo{
+
+            position: absolute;
+            right: 0px;
+            top: 250px;
+
+        }
+        .kuo1{
+
+            position: absolute;
+            left: 0px;
+            top: 250px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="wine">
+                <ol>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ol>
+        <span class="kuo">
+            &gt;
+        </span>
+        <span class="kuo1">
+            &lt;
+        </span>
+       </div>
+    </div>
+</body>
+</html>

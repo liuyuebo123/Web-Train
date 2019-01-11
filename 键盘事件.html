@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #a{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+        }
+    </style>
+    <script>
+        <!-- 最开始dir是空置，switch找到是空值，但是页面只是加载完成，并没有执行，到了键盘赋值那里才将值赋到dir里面。-->
+        window.onload=function(){
+            var dir = null;
+            var speed=10;
+            setInterval(function(){
+                var a=document.getElementById("a");
+
+                    switch(dir){
+                        case 37:
+                            a.style.left= a.offsetLeft-speed+"px";
+                            break;
+                        case 39:
+                            a.style.left= a.offsetLeft+speed+"px";
+                            break;
+                        case 38:
+                            a.style.top= a.offsetTop-speed+"px";
+                            break;
+                        case 40:
+                            a.style.top= a.offsetTop+speed+"px";
+                            break;
+                    }
+                document.onkeydown=function(event){
+                    dir = event.keyCode;
+                    if(event.ctrlKey){
+                        speed=100;
+                    }else{
+                        speed=10;
+                    }
+
+                }
+            },30)
+                document.onkeyup=function(event){
+                    dir=0;
+                }
+
+
+
+        }
+    </script>
+</head>
+<body>
+<div id="a"></div>
+</body>
+</html>

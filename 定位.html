@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+       ul
+        {
+            width: 800px;
+            height: 50px;
+            background-color:gray;
+            /*position: relative;*/
+            position: absolute;
+            top: 50px;
+            left: 250px;
+           list-style: none;
+        }
+        ul li
+        {
+            float: left;
+            line-height: 50px;
+            width: 100px;
+        }
+        ul li:nth-of-type(4)
+        {
+            position: relative;
+        }
+       /*ul li:nth-of-type(4) img
+       {
+           position: relative;
+           left: 0px;
+           top: 0px;
+       }相对定位*/
+
+
+
+       /*ul li:nth-of-type(4) img {
+           position: absolute;
+           left: 355px;
+           top: -10px;
+       }绝对定位*/
+
+
+       ul li:nth-of-type(4) img
+        {
+           position: absolute;
+           left: 13px;
+           top: -10px;
+       }
+    </style>
+</head>
+<body>
+<ul>
+    <li>服装</li>
+    <li> 美妆箱</li>
+    <li>京东超市</li>
+    <li>
+        全球购
+        <img src="image/yuandian.png"/>
+    </li>
+    <li>闪购</li>
+    <li> 团购</li>
+    <li>拍卖</li>
+    <li>金融</li>
+</ul>
+
+</div>
+</body>
+</html>

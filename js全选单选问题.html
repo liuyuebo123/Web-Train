@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var i=0;
+    var items=document.getElementsByName("items");
+    function fun(){
+        for(i=0;i<4;i++){
+      items[i].checked=true;
+    }
+    }
+    function fun1(){
+        for(i=0;i<4;i++){
+            items[i].checked=false;
+        }
+    }
+    function fun2(){
+        for(i=0;i<4;i++){
+            if(items[i].checked==true){
+                items[i].checked=false;
+            }
+            else if(items[i].checked==false){
+                items[i].checked=true;
+            }
+        }
+    }
+    function fun3(){
+        for(i=0;i<4;i++){
+            if(items[i].checked==true){
+            alert(items[i].value);
+        }
+        }
+    }
+    function fun4(){
+        if(allselect.checked==true){
+            for(i=0;i<4;i++){
+                items[i].checked=true;
+            }
+
+        }
+        if(allselect.checked==false){
+            for(i=0;i<4;i++){
+                items[i].checked=false;
+            }
+
+        }
+    }
+</script>
+你爱好的运动是？ <input type="checkbox" id="allselect" onclick="fun4()"/>全选/全不选<br/>
+<input type="checkbox" name="items" value="足球"/>足球
+<input type="checkbox" name="items" value="篮球"/>篮球
+<input type="checkbox" name="items" value="羽毛球"/>羽毛球
+<input type="checkbox" name="items" value="兵乓球"/>兵乓球<br/>
+<button onclick="fun()">全选</button>
+<button onclick="fun1()">全不选</button>
+<button onclick="fun2()">反选</button>
+<button onclick="fun3()">提交</button>
+</body>
+</html>

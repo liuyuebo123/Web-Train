@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    *
+    {
+        margin:0;
+        padding:0;
+    }
+        .header
+        {
+            width: 960px;
+            height: 80px;
+            /*background-color: red;*/
+            margin: 0 auto;
+            padding-top: 27px;
+            box-sizing: border-box;
+        }
+        .logo
+        {
+            width: 644px;
+            height: 27px;
+            background: url(image/捕获.PNG) no-repeat 0 0;
+        }
+        .header .logo a
+        {
+            display: inline-block;
+            width: 127px;
+            height: 27px;
+            float: left;
+        }
+        .header .links
+        {
+            width: 200px;
+            height: 27px;
+            float: right;
+            /*background: yellow no-repeat 0 0;*/
+            text-align: right;
+        }
+        .header .links a
+        {
+            text-decoration: none;
+            margin: 0 5px;
+            font-size: 12px;
+            line-height: 17px;
+            color: #cccccc;
+            text-align: center;
+        }
+        .content
+        {
+            width: 960px;
+            height: 600px;
+            margin:0 auto;
+            box-sizing: border-box;
+            border: 1px solid darkgrey;
+            border-top: none;
+            border-right: none;
+        }
+        .content .top
+        {
+            box-sizing: border-box;
+            width: 960px;
+            height: 38px;
+            background: url(image/捕获1.PNG) repeat-x 0 0;
+
+        }
+    .content .left
+    {
+        width: 960px;
+        height: 38px;
+        background:url("image/捕获2.PNG") no-repeat left 1px ;
+
+    }
+    .content .right
+    {
+        width: 960px;
+        height: 38px;
+        background: url("image/捕获3.PNG")  no-repeat right -40px;
+
+
+    }
+        .content .top p
+        {
+           line-height: 28px;
+            font-size: 14px;
+            color: white;
+            margin-left: 20px;
+        }
+        .content .bottom
+        {
+            width: 960px;
+            height: 562px;
+
+
+        }
+        .content .bottom .lefeside
+        {
+            width: 642px;
+            height: 562px;
+            float: left;
+            /*background-color: red;*/
+
+        }
+        .content .bottom .rightside
+        {
+            width: 318px;
+            height: 562px;
+            float: right;
+            /*background-color: yellow;*/
+            padding-top: 105px;
+            padding-left: 45px;
+            box-sizing: border-box;
+            border-left: 1px solid darkgrey;
+            border-right: 1px solid darkgrey;
+            border-bottom: 1px solid darkgrey;
+            
+        }
+        .content .bottom .lefesidetop
+        {
+            width: 560px;
+            height: 60px;
+            /*background-color: yellow;*/
+            box-sizing: border-box;
+            margin:0 auto;
+            padding-top: 10px;;
+        }
+        .content .bottom .lefesidetop ul
+        {
+            width: 412px;
+            height: 32px;
+            list-style:none;//去除ul前面的点
+            /*background-color : pink;*/
+
+        }
+    .content .bottom .lefesidetop ul li
+    {
+        width: 137px;
+        height: 34px;
+        float: left;
+        text-align: center;
+
+    }
+    .content .bottom .lefesidebottom
+    {
+        width: 560px;
+        height: 373px;
+        /*background-color:green;*/
+        margin:0 auto;
+        ;
+    }
+    .lsb1
+    {
+        width: 513px;
+        height: 69px;
+        /*background-color: red;*/
+
+    }
+    span
+    {
+        width: 80px;
+        height: 40px;
+        /*background-color: yellow;*/
+        font-size: 12px;
+        line-height: 60px;
+        text-align: right;
+        margin: 10px;
+    }
+    .aa
+    {
+        width: 212px;
+        height: 27px;
+        margin: 10px;
+    }
+    .xinhao
+    {
+        color:red;
+    }
+    .xzbd
+    {
+
+
+        float:right;
+        margin-top:19px;
+    }
+        .footer
+        {
+            width: 960px;
+            height: 48px;
+        }
+    </style>
+
+</head>
+<body>
+ <div class="header">
+     <div class="logo">
+         <a href="#" title="网易163免费邮"></a>
+         <a href="#" title="网易126免费邮"></a>
+         <a href="#" title="网易yead.net免费"></a>
+     </div>
+     <div class="links">
+         <a href="#">了解更多</a>
+         |
+         <a href="#">反馈意见</a>
+     </div>
+ </div>
+<div class="content">
+    <div class="top">
+        <div class="left"><p>欢迎注册无限容量的网易邮箱！邮件地址可以登录使用其他网易旗下产品。</p></div>
+        <div class="right"></div>
+    </div>
+    <div class="bottom">
+        <div class="lefeside">
+            <div class="lefesidetop">
+                <ul>
+                    <li>注册字母邮箱</li>
+                    <li>注册手机号码邮箱</li>
+                    <li>注册VIP邮箱</li>
+                </ul>
+            </div>
+            <div class="lefesidebottom">
+                <div class="lsb1">
+                <span><span class="xinhao">*</span>邮件地址</span>
+                    <input type="text"class="aa"/>@
+                 <div class="xzbd">
+                    <form action="">
+                        <select value="@163.com" checked="checked">
+                            <option >
+                                @163.com
+                            </option>
+                            <option >
+                                @126.com
+                            </option>
+                            <option >
+                                @yead.net.com
+                            </option>
+                        </select>
+                    </form>
+
+                 </div>
+            </div>
+            </div>
+        </div>
+        <div class="rightside">
+            <img src="image/网易邮箱.gif" alt=""/>
+        </div>
+    </div>
+
+</div>
+ 
+<div class="footer">
+
+</div>
+</body>
+</html>

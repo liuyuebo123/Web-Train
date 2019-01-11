@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+       div{
+           width: 200px;
+           height: 200px;
+           margin: 100px auto;
+           transform-style: preserve-3d;
+           transform:rotateX(0deg) rotateY(0deg);
+           position:relative;
+
+       }
+       ul {
+           width: 200px;
+           height: 200px;
+           list-style: none;
+
+       }
+        @keyframes sport {
+            from{
+                transfrom:rotateX(0deg)
+            }
+            to{
+                transform: rotateX(360deg);
+            }
+        }
+
+       li{
+           width: 200px;
+           height: 200px;
+           position: absolute;
+           animation: sport 10s linear 0s infinite normal;
+       }
+        li:nth-child(1){
+            background-color: pink;
+            top: 0;
+            left: 0px;
+            transform: translateZ(100px);
+        }
+
+       li:nth-child(2){
+           background-color:red;
+           top: 0;
+           left: -100px;
+           transform:rotateY(90deg) ;
+       }
+     li:nth-child(3){
+           background-color: blue;
+            top: 0;
+            left: 100px;
+         transform:rotateY(90deg) ;
+       }
+       li:nth-child(4){
+           background-color: yellow;
+           top: 100px;
+           left: 0;
+           transform:rotateX(90deg) ;
+       }
+       li:nth-child(5){
+           background-color: purple;
+           top: -100px;
+           left: 0;
+           transform:rotateX(90deg) ;
+       }
+       li:nth-child(6){
+           background-color: chartreuse;
+           top: 0;
+           left: 0;
+           transform: translateZ(-100px);
+       }
+
+    </style>
+</head>
+<body>
+<div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+  <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+</div>
+</body>
+</html>

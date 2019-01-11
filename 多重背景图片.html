@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<!--先添加的背景图片会覆盖后添加的背景图片-->
+<style>
+    *{
+        padding:0px;
+        margin: 0px;
+    }
+    div{
+        margin: 100px auto;
+        width: 800px;
+        height: 200px;
+        background-image:url(image/飞机.png),url(image/太阳.png),url("image/天空.jpg");
+        background-repeat:no-repeat,no-repeat,repeat;
+        background-size:100px 60px,100px 60px,800px auto;
+        background-position:  50px 140px, 600px 20px, 0 0;
+        animation: sport 5s linear 0s infinite normal;
+    }
+    @keyframes sport {
+          from{
+              background-position:  50px 140px, 600px 20px, 0 0;
+          }
+          to{
+              background-position:  200px -150px, 600px 20px,-400px 0;
+          }
+      }
+</style>
+<body>
+<div></div>
+</body>
+</html>

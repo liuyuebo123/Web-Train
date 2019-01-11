@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        <!-- 在ul里放多张图，把ul当成一张图看，然后让这张图动即可-->
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            margin: 100px auto;
+            width: 800px;
+            height: 200px;
+            overflow: hidden;
+        }
+        ul{
+
+            width: 2500px;
+            height: 200px;
+            /*background-color: yellow;*/
+            list-style: none;
+            /*position: relative;*/
+            animation: one 5s linear 500ms infinite normal;
+            transition:all 1ms;
+        }
+        @keyframes one {
+            from{
+                margin-left: 0px;
+            }
+            to{
+                margin-left: -1600px;
+            }
+        }
+        ul li{
+            width: 400px;
+            height: 200px;
+            /*border: 1px solid gold;*/
+            /*background-color: red;*/
+            /*position: absolute;*/
+            float: left;
+
+       }
+        ul:hover li{
+            opacity:0.5;
+
+        }
+        ul:hover{
+            -webkit-animation-play-state:paused;
+        }
+        ul li:hover{
+            opacity:1;
+        }
+         ul li:nth-child(1){
+             background: url("image/wczt1.jpg");
+         }
+         ul li:nth-child(2){
+             background: url("image/dm/扑克牌.jpg");
+         }
+         ul li:nth-child(3) {
+             background: url("image/dm/高清3.jpg");
+         }
+        ul li:nth-child(4){
+            background: url("image/美食.jpg");
+         }
+        ul li:nth-child(5){
+            background: url("image/dm/高清1.jpg");
+        }
+        ul li:nth-child(6){
+            background: url("image/dm/高清2.jpg");
+        }
+
+     </style>
+</head>
+<body>
+<div>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 100%;
+            height: 5000px;
+            background-color: yellow;
+
+        }
+        .aa {
+           width: 100%;                      /*如果不将宽度设成百分之百，而是设置成如和图片宽度一样大，则会出现背景图片不在屏幕居中的问题，
+                                               因为图片在这div里，它只会相对这个div居中，而不是屏幕，所以就这个而言，需要将宽度设置成百分之百   */
+            height: 79px;
+            margin: 0 auto;
+            background: url("image/新浪导航条.PNG") no-repeat center top;
+            position: fixed;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="aa"></div>
+</div>
+</body>
+</html>

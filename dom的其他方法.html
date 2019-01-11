@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function fun(){
+            //document.createElement()方法
+
+//        var li=document.createElement("li");  //创建一个li的元素节点
+//        var gz=document.createTextNode("广州"); //创建一个文本节点
+//        li.appendChild(gz);                    //像一个父亲节点添加一个文本节点，其中这里的li是父节点
+//        var city=document.getElementById("city");
+//        city.appendChild(li);   //需要将li添加到ul中
+
+
+        //inserBefore（）方法
+//        var li=document.createElement("li");
+//        var gz=document.createTextNode("广州");
+//        var bj=document.getElementById("bj");
+//        var city=document.getElementById("city");
+//        li.appendChild(gz);
+//        city.insertBefore (li,bj);
+
+        //replaceChild()方法
+        var li=document.createElement("li");
+        var gztext=document.createTextNode("广州");
+        li.appendChild(gztext);
+        var city=document.getElementById("city");
+        city.replaceChild(gztext,bj);
+    }
+</script>
+<ul id="city">
+    <li id="bj">北京</li>
+    <li>上海</li>
+    <li>深圳</li>
+</ul>
+<button onclick="fun()">点击</button>
+</body>
+</html>

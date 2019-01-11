@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background: url("image/陈冠希/大图.jpg") no-repeat;
+            background-size: cover;                                  /*设置背景图片*/
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(-19deg);
+
+        }
+        .edison{
+            position: absolute;
+            animation: heart 10s linear 0s infinite normal;
+        }
+
+        @keyframes heart {
+            0%{
+                left:0px;
+                top: 0px;
+            }
+            20%{
+                left: 100px;
+                top:100px;
+            }
+            40%{
+                left: 400px;
+                top:400px;
+            }
+            60%{
+                left:600px;
+                top:500px;
+            }
+            80%{
+                left: 800px;
+                top:500px;
+            }
+            100%{
+                right:100px;
+                top: 100px;
+            }
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            /*background-color: red;*/
+            list-style: none;
+            position: absolute;
+            bottom: -500px;
+            left:50%;                       /*这行代码和下面一行代码是设置ul居中，宽度的一半指的是ul宽度的一半*/
+            margin-left:-100px;
+            animation: sports 5s linear 0s infinite normal;
+        }
+
+        ul li{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+        }
+        ul li:nth-child(1) {
+            transform: rotateY(60deg) translateZ(200px);
+            /*background-color: pink;*/
+        }
+        ul li:nth-child(2) {
+            transform: rotateY(120deg) translateZ(200px);
+            /*background-color: purple;*/
+        }
+        ul li:nth-child(3) {
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        ul li:nth-child(4) {
+            transform: rotateY(240deg) translateZ(200px);
+            /*background-color: yellow;*/
+        }
+        ul li:nth-child(5) {
+            transform: rotateY(300deg) translateZ(200px);
+            /*background-color:black;*/
+        }
+        ul li:nth-child(6) {
+            transform: rotateY(360deg) translateZ(200px);
+            /*background-color:green;*/
+        }
+        ul li img{
+            width: 200px;
+            height: 200px;
+        }
+        .edison{
+            width: 200px;
+            height: 200px;
+        }
+        @keyframes sports {
+            from{
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+            <ul>
+                <li><img src="image/陈冠希/陈1.jpg" alt=""/></li>
+                <li><img src="image/陈冠希/陈2.jpg" alt=""/></li>
+                <li><img src="image/陈冠希/陈3.jpg" alt=""/></li>
+                <li><img src="image/陈冠希/陈4.jpg" alt=""/></li>
+                <li><img src="image/陈冠希/陈5.jpg" alt=""/></li>
+                <li><img src="image/陈冠希/陈6.jpg" alt=""/></li>
+            </ul>]
+            <img src="image/陈冠希/爱心.png" class="edison"/>
+            <!--<audio src="http://www.170mv.com/kw/other.web.rd01.sycdn.kuwo.cn/resource/n3/25/25/4018692331.mp3"autoplay="autoplay" loop="loop"></audio>-->
+</body>
+</html>

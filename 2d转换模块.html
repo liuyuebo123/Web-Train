@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<style>
+    *{
+        margin: 0 auto;
+    }
+    /*div{*/
+        /*width: 200px;*/
+        /*height: 300px;*/
+        /*background-color: yellow;*/
+        /*margin:100px auto;*/
+        /*transform: translate(100px,0);*/
+        /*transform: translate(100px);*/
+        /*transform: rotate(300deg);*/
+        /*transform:scale(1.1.5)*/
+        /*transform:scale(1.5)*/
+        /*transform:skew(50deg,0deg)*/
+        /*transform-origin: 0 0;*/
+        /*perspective: 500px;*/
+        /*transform:skew(0deg,50deg)*/
+    /*}*/
+    div{
+        margin:100px auto;
+        width: 600px;
+        height: 750px;
+        background: skyblue;
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+        perspective: 500px;
+
+    }
+    img{
+        width: 500px;
+        height: 600px;
+        position: absolute;
+        bottom: 0;
+        left: 45px;
+        transition: transform 2s;
+
+    }
+    div:hover img{
+        transform-origin: center bottom;
+        transform: rotateX(80deg)
+    }
+</style>
+</body>
+<div>
+    <img src="image/dm/扑克牌.jpg" alt=""/>
+</div>
+</html>

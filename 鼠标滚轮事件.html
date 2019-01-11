@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+          var a=document.getElementById("a");
+            a.onmousewheel=function(event){
+                event=event||window.event;                 //解决event事件的兼容问题
+                if(event.wheelDelta>0 || event.detail<0){                   //获取滚轮向上滑或者向下划时取值是正数还是负数的问题
+                    a.style.height= a.clientHeight-10+"px";
+                }else{
+                    a.style.height=a.clientHeight+10+"px";
+                }
+            }
+            bind(a,"DOMMouseScroll", a.onmousewheel)          //解决多个元素绑定同一个函数的兼容问题
+            function bind(obj,eventStr,callback){
+                if(obj.addEventListener){
+                    obj.addEventListener(eventStr,callback,false);
+                }else{
+                    obj.attachEvent("on"+eventStr,function(){
+                        callback(obj);
+                    })
+                }
+                }
+            }
+
+    </script>
+</head>
+<body>
+<div id="a">
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            margin: 100px auto;
+            width: 1000px;
+            height: 600px;
+            /*background: yellow;*/
+            text-align: center;
+
+        }
+        img{
+            width: 1000px;
+            height: 500px;
+        }
+        </style>
+
+   
+</head>
+<body>
+ <div>
+     <img id="img1" src="image/dm/高清3.jpg" alt=""  />
+     <button id="pre" onclick="del()">上一张</button>
+     <button id="next" onclick="add()">下一张</button>.
+
+
+ </div>
+ <script>
+     var imgarr=["image/dm/高清1.jpg","image/dm/高清2.jpg","image/dm/高清3.jpg","image/dm/高清4.jpg","image/dm/高清5.jpg"];
+     var pre=document.getElementById("pre");
+     var next=document.getElementById("next");
+     var img=document.getElementById("img1");
+    var index=2;
+     function del(){
+         if(index!=0){
+             index--;
+             img.src=imgarr[index];
+         }
+     }
+     function add(){
+         if(index!=4){
+             index++;
+             img.src=imgarr[index];
+         }
+     }
+ </script>
+</body>
+</html>

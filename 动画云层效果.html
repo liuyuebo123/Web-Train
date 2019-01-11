@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        <!-- 如果将多张背景图片放在同一个div中，图片是不会发生重叠的，想要重叠，可以用子绝父相进行定位-->
+        *{
+            margin: 0;
+            padding: 0px;
+        }
+        ul{
+            margin: 100px auto;
+            width: 100%;
+            height: 600px;
+            background-color: skyblue;
+            list-style: none;
+            animation: colors 5s linear 2s infinite alternate;
+            position: relative;
+
+        }
+        @keyframes colors{
+            from{
+                background-color: skyblue;
+            }
+            to{
+                background-color: black;
+            }
+        }
+        @keyframes one{
+            from{
+                left: 0px;
+            }
+            to{
+                left: 1000px;
+            }
+        }
+        @keyframes two{
+            from{
+                left: 0px;
+            }
+            to{
+                left: 1000px;
+            }
+        }
+        @keyframes three{
+            from{
+                left: 0px;
+            }
+            to{
+                left: -1000px;
+            }
+        }
+        ul li{
+            width: 400%;
+            height: 600px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        ul li:nth-child(1){
+            background: url("image/dm/云1.png");
+            animation: one 6s linear 0s infinite alternate;
+        }
+        ul li:nth-child(2){
+            background: url("image/dm/云2.png");
+            animation: two 10s linear 0s infinite alternate;
+        }
+        ul li:nth-child(3){
+            background: url("image/dm/云3.png");
+            animation: three 6s ease 0s infinite alternate;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+   <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

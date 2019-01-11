@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        <!--过渡套路
+            第一步先不管过速，先进行基本布局
+             第二步修改我们认为需要修改的属性
+            第三步再回头给被修改的属性的那个元素添加过渡就行
+        -->
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            margin: 100px auto;
+            width: 960px;
+            height: 1600px;
+            border:1px solid gold ;
+            list-style: none;
+        }
+        ul li{
+            width: 160px;
+            height: 1600px;
+            float: left;
+            overflow: hidden;
+            transition: width 3s;
+
+        }
+        ul:hover li{              /*当鼠标移动到ul时，li中的width的宽度变小（li在前面设置的宽度是160px）*/
+            width: 120px;
+        }
+        ul li:hover{              /*当鼠标移动到li时(而不是ul)，li中的width的宽度变大,所以两个联合起来使用，就可以达到本例的效果*/
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="image/dm/高清1.jpg" alt=""/></li>
+    <li><img src="image/dm/高清2.jpg" alt=""/></li>
+    <li><img src="image/dm/高清3.jpg" alt=""/></li>
+    <li><img src="image/dm/高清4.jpg" alt=""/></li>
+    <li><img src="image/dm/高清5.jpg" alt=""/></li>
+    <li><img src="image/dm/高清6.jpg" alt=""/></li>
+</ul>
+</body>
+</html>

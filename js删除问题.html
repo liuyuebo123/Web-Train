@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        window.onload=function() {
+            var i = 0;
+            var flag="你确定删除吗？";
+            var alla = document.getElementsByTagName("a");
+            for (i = 0; i < alla.length; i++) {
+                alla[i].onclick = function () {
+                    var tr = this.parentNode.parentNode;
+
+                    if(confirm(flag)==true)
+                    {tr.parentNode.removeChild(tr);}
+                }
+            }
+            var anniu=document.getElementById("anniu");//点击按钮触发事件
+            anniu.onclick=function(){
+               var name=document.getElementById("name").value;//先获取这三个属性
+                var email=document.getElementById("email").value;
+                var salary=document.getElementById("salary").value;
+                var tr=document.createElement("tr"); //创建一行
+                var nametd=document.createElement("td");
+                var emailtd=document.createElement("td");
+                var salarytd=document.createElement("td");
+                var deltd=document.createElement("td");
+                var nametext=document.createTextNode(name);//在这表格的一行中分别创建name email sarary这是三个属性
+                var emailtext=document.createTextNode(email);
+                var salarytext=document.createTextNode(salary);
+                var deltext=document.createTextNode("delete");
+                nametd.appendChild(nametext);      //将直添加到父节点中
+                emailtd.appendChild(emailtext);
+                salarytd.appendChild(salarytext);
+                deltd.appendChild(deltext);
+                tr.appendChild(nametd);            //再将得到的父节点添加到trzhong
+                tr.appendChild(emailtd);
+                tr.appendChild(salarytd);
+                tr.appendChild(deltd);
+                var tablet=document.getElementById("tablet");//将tr中的值添加到表格中
+                tablet.appendChild(tr);
+            }
+        }
+    </script>
+    <style>
+        div{
+            margin: 100px auto;
+            width: 300px;
+            height: 300px;
+            border: 1px solid yellow;
+            position: absolute;
+            left: 523px;
+            top: 150px;
+        }
+
+    </style>
+</head>
+<body>
+<table border="1" bgcolor="white" align="center" id="tablet">
+    <tr>
+        <th>name</th>
+        <th>e-mail</th>
+        <th>salary</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp</th>
+    </tr>
+    <tr>
+        <td>tom</td>
+        <td>qqqq</td>
+        <td>1234</td>
+        <td><a href="#" name="abc" >delete</a></td>
+    </tr>
+    <tr>
+        <td>tony</td>
+        <td>qqqq</td>
+        <td>1234</td>
+        <td><a href="#" name="abc">delete</a></td>
+    </tr>
+    <tr>
+        <td>ACE</td>
+        <td>qqqq</td>
+        <td>1234</td>
+        <td><a href="#" name="abc">delete</a></td>
+    </tr>
+    <div>
+        <h3>添加新员工</h3>
+        name:<input type="text"  id="name"/><br/>
+        email:<input type="text" id="email"/><br/>
+        salary:<input type="text" id="salary"/><br/>
+        <input type="submit" id="anniu"/>
+    </div>
+
+</table>
+</body>
+</html>

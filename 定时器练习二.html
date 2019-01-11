@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    #div1{
+        width: 100px;
+        height:100px;
+        background-color: yellow;
+    }
+    </style>
+    <script>
+    window,onload=function(){
+        var btn1=document.getElementById("btn1");
+        btn1.onclick=function(){
+            setInterval(function(event){
+                var left=event.offsetLeft;
+                div1.style.left=left;
+            },30);
+        }
+    }
+    </script>
+</head>
+<body>
+<button id="btn1">点击向右</button>
+<div id="div1"></div>
+</body>
+</html>

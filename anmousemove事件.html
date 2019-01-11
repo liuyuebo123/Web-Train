@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            height: 1000px;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var div1=document.getElementById("div1");
+            document.onmousemove=function(event){       //讲整个页面绑定给document，整个页面都是document
+                event=event||window.event;
+                var st=document.body.scrollTop||document.documentElement.scrollTop;//获取垂直滚动条,且解决兼容问题
+                var s1=document.body.scrollLeft||document.documentElement.scrollLeft;//获取水平滚动条,且解决兼容问题
+                var left=event.clientX;
+                var top=event.clientY;
+                div1.style.left=left+s1+"px";
+                div1.style.top=top+st+"px";
+
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

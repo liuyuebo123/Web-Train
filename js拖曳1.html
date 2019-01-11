@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #abc{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: absolute;
+
+        }
+
+    </style>
+    <script>
+        window.onload=function(){
+            var abc=document.getElementById("abc");
+            abc.onmousedown=function(event){
+                event=event||window.event;
+                var ol=event.clientX-abc.offsetLeft;
+                var ot=event.clientY-abc.offsetTop;
+                document.onmousemove=function(event){
+                    event=event||window.event;
+                   var left=event.clientX-ol;
+                   var top=event.clientY-ot;
+                    abc.style.left=left+"px";
+                    abc.style.top=top+"px";
+                }
+            }
+            abc.onmouseup=function(){
+                document.onmousemove=null;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="abc"></div>
+
+</body>
+</html>

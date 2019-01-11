@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        div{
+            margin: 100px auto;
+            width: 1000px;
+            height: 600px;
+            background-color: skyblue;
+            text-align: center;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            transition: transform 3s;
+        }
+      img:nth-child(1){
+          transform: rotate(30deg);
+      }
+        img:nth-child(2){
+            transform:rotate(50deg);
+        }
+        img:nth-child(3){
+            transform:rotate(-30deg);
+        }
+        div img:hover:nth-child(1){
+            transform: rotate(0deg);
+        }
+        div img:hover:nth-child(2){
+            transform: rotate(0deg);
+        }
+        div img:hover:nth-child(3){
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="image/dm/高清1.jpg" alt="" />
+        <img src="image/dm/高清2.jpg" alt="" />
+        <img src="image/dm/高清3.jpg" alt="" />
+    </div>
+</body>
+</html>
